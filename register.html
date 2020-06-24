@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+<link href="css/register.css" rel="stylesheet"  >
+<link rel="start icon" href="images/resize_png_new.png"  >
+
+</head>
+
+<body class="bg-gray">
+<div> 
+  <!--top start-->
+  <div class="tp for-register">
+    <div class="tp_box clearfix">
+      <div class="top"> <span class="tp_loginInfo">您好，欢迎来到折扣社！</span> </div>
+    </div>
+  </div>
+  <!--top end--> 
+  <!--hd start-->
+  <div class="login-wrap">
+    <div class="w940">
+      <div class="header clearfix">
+        <h1 class="fl"> <a title="折扣社" href="index.html"> <img src="images/logo.png"> </a> </h1>
+        <div class="welcome fl">欢迎注册</div>
+      </div>
+    </div>
+  </div>
+  <!--hd end-->
+  <!-- content start -->
+  <div class="container w940">
+    <div class="register">
+      <div class="spsearch">
+        <p>
+          <label><b class="star">*</b>&nbsp;用户名：</label>
+          <input class="spnormal" type="text" id="username" onblur="checkusername()">
+          <span  class="long">6-18位字符，可使用字母、数字、下划线，需要以字母开头</span> </p>
+      </div>
+      <div class="spsearch">
+        <p>
+          <label><b class="star">*</b>&nbsp;请设置密码：</label>
+          <input class="spnormal" type="password" id="password-1" onblur="checkpassword()" >
+          <span class="short">6-16位字符，区分大小写</span> </p>
+      </div>
+      <div class="spsearch">
+        <p>
+          <label><b class="star">*</b>&nbsp;请确定密码：</label>
+          <input class="spnormal" type="password" id="password-2" onblur="recheckpassword()">
+          <span  class="short">请再次输入密码</span> </p>
+      </div>
+        <!--新添加的内容-->
+        <div class="spsearch">
+            <p>
+                <label><b class="star"></b> 联系电话：</label>
+                <input class="spnormal" type="text" id="phoneNum" onblur="checkphoneNum()">
+                <span class="long">联系电话可以是手机号或座机号(如，023-49891202)</span>
+            </p>
+        </div>
+        <div class="spsearch">
+            <p>
+                <label><b class="star"></b> 邮箱：</label>
+                <input class="spnormal" type="text" id="e-mail" onblur="checkemail()">
+            </p>
+        </div>
+        <div class="spsearch">
+            <p>
+                <label><b class="star"></b> 住址：</label>
+                <form class="spnormal">
+                    <div>
+                        <select name="province" id="province">
+                            <option>选择省、市、和特区</option>
+                        </select>
+                        <select name="city" id="city">
+                            <option>选择城市</option>
+                        </select>
+                    </div>
+                </form>
+            </p>
+        </div>
+        <!--新增内容到此为止-->
+      <div class="spsearch item">
+        <p>
+          <label>&nbsp;</label>
+          <input type="button" id="kpp" onClick="checksum()">
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--footer start-->
+  <div class="ft for-register mt10">
+    <div class="ft_box clearfix">
+      <p class="fr copyRight">鄂ICP ©折扣店2013-2014，All Rights Reserved</p>
+    </div>
+  </div>
+  <!--footer end--> 
+</div>
+</body>
+
+<script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="script/js.js"></script>
+    <script type="text/javascript" src="script/cookie.js"></script>
+</html>
