@@ -705,7 +705,6 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizi
     display: none;
     pointer-events:auto;
     z-index:9999;
-
 }
 .mini_login{
     position:absolute;
@@ -718,6 +717,10 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizi
     position: absolute;
     font-size: 15px;
     z-index:9999;
+}
+.yournote{
+    width: 420px;
+    margin-left: 400px;
 }
 /*轮播图-----------------------------*/
 .carousel{
