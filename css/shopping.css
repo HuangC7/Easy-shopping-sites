@@ -75,10 +75,14 @@ body {
 	margin-left: 100px;
     margin-bottom: 20px;
 }
+#logo img{
+	width: 88px;
+	height: 100px;
+}
 .search {
 	float: left;
 	margin-left: 686px;
-	margin-top: -60px;
+	margin-top: -110px;
 	border: none;
 }
 #sitesearch {
@@ -89,7 +93,7 @@ body {
 	display: block;
 	float: left;
 	width: 230px;
-	height: 25px;
+	height: 35px;
 	margin: 0 15px 0 0;
 	padding: 0 5px;
 	color: #979797;
@@ -108,13 +112,13 @@ body {
 	float: left;
 	display: block;
 	margin-left: 1017px;
-	margin-top: -48px;
+	margin-top: -98px;
 }
 .icon2 {
 	float: left;
 	display: block;
 	margin-left: 1072px;
-	margin-top: -48px;
+	margin-top: -98px;
 }
 .icon3 {
 	width: 100px;
@@ -123,7 +127,7 @@ body {
 	float: right;
 	display: block;
 	margin-right: 139px;
-	margin-top: -51px;
+	margin-top: -101px;
 }
 .icon3 a {
 	text-decoration: none;
@@ -162,6 +166,7 @@ a.register_user:hover {
 	position: relative;
 	z-index: 100;
 	font-size: 16px;
+	margin-top: -20px;
 }
 .header-menu ul {
 	margin-left: 24px;

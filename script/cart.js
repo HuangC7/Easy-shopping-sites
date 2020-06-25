@@ -173,3 +173,36 @@ window.onload = function () {
     checkAllInputs[0].checked = true;
     checkAllInputs[0].onclick();
 }
+/*返回顶部js实现----------------*/
+$(function (){
+    var btn = document.getElementById("btn_2");
+    var timer = null;
+    var isTop = true;
+    var clientHeight = document.documentElement.clientHeight;
+    window.onscroll = function(){
+        var topValue = document.documentElement.scrollTop ||document.body.scrollTop;
+        if(topValue >= (clientHeight / 5)){
+            btn.style.display = "block";
+        }else{
+            btn.style.display = "none";
+        }
+        if(!isTop){
+            clearInterval(timer);
+        }
+        isTop = false;
+    };
+    btn.onclick = function(){
+        timer = setInterval(function(){
+            var topValue = document.documentElement.scrollTop ||document.body.scrollTop;
+            var speed = Math.floor(-topValue/6);
+            document.documentElement.scrollTop = document.body.scrollTop = topValue + speed;
+            isTop = true;
+            console.log(topValue - speed);
+            if(topValue == 0){
+                clearInterval(timer);
+            }
+        },30);
+    }
+})
+
+/*返回顶部js实现end-------------*/

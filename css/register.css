@@ -28,6 +28,8 @@
 	font: bold 30px "SimHei";
 	padding-top: 14px;
 	color: #535353;
+	margin-left: 30px;
+	margin-top: 20px;
 }
 .personal_info {
 	display: inline-block;
@@ -263,6 +265,10 @@ border:none;
 .fl {
 	float: left;
 	margin-left:20px;
+}
+.fl img{
+	width: 88px;
+	height: 100px;
 }
 .fr {
 	float: right;

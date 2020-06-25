@@ -2,7 +2,7 @@
 /* CSS Document */
 /*----------------+++*/
 #content{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 300px;
 	clear: left;
 	position: relative;
@@ -308,6 +308,4 @@ ul.rating li.five a:hover {background-position:0 -160px}
 	position:absolute;
 	display:block;
 }
-
-
 /*----------------------*/

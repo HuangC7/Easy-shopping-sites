@@ -372,6 +372,18 @@ tbody tr:hover {
 #sitesearch input#search{
    margin-top: 10px;
 }
-
+.btn_2{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	display: none;
+	margin-left: 650px;
+	background: url(../images/btn.png) no-repeat left top;
+	left: 50%;
+	bottom: 30px;
+}
+.btn_2:hover{
+	background: url(../images/btn.png) no-repeat left -40px;
+}
 
 /*end---------------------------*/
