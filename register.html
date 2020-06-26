@@ -65,13 +65,16 @@
         <div class="spsearch">
             <p>
                 <label><b class="star"></b> 住址：</label>
-                <form class="spnormal">
-                    <div>
+                <form class="spnormal" action="">
+                    <div class="level-menu">
                         <select name="province" id="province">
-                            <option>选择省、市、和特区</option>
+                            <option value="">选择省、市、和特区</option>
                         </select>
                         <select name="city" id="city">
-                            <option>选择城市</option>
+                            <option value="">选择城市</option>
+                        </select>
+                        <select name="area" id="area">
+                            <option value="">选择县区</option>
                         </select>
                     </div>
                 </form>
@@ -95,8 +98,8 @@
   <!--footer end--> 
 </div>
 </body>
-
 <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="script/js.js"></script>
     <script type="text/javascript" src="script/cookie.js"></script>
+    <script type="text/javascript" src="script/level-select.js"></script>
 </html>

@@ -165,6 +165,7 @@ function checkphoneNum() {
     }
     return true;
 }
+
 //
 function checksum() {
     var arr = $.cookie("users")?JSON.parse($.cookie("users")):[];
@@ -364,7 +365,7 @@ $('.cart-more').hover(function  () {
 })
 /*tab选项end----------------*/
 /*自定义tab选项插件---------------*/
-window.onload = function(){
+$(function () {
     var items = document.getElementById("list").getElementsByTagName("li");
     var	divs = document.getElementById("item").getElementsByTagName("div");
     for(var i = 0,len = items.length; i < len; i++){
@@ -382,7 +383,7 @@ window.onload = function(){
             }
         }
     }
-}
+})
 /*自定义tab选项插件end -----------*/
 /*jQuery实现无缝滚动---------------*/
 $(function () {
