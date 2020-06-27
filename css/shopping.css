@@ -438,10 +438,15 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizi
 	margin-left: 167px;
     font-size: 15px;
 }
+.container1 img{
+	height: 100px;
+	width: 80px;
+	margin-top: 20px;
+}
 .container2 {
 	width: 280px;
 	height: 110px;
-	margin-top: 10px;
+	margin-top: 20px;
 	float: inherit;
 	padding: 10px 3px;
 }
@@ -482,7 +487,7 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizi
 .container3 {
 	width: 290px;
 	height: 110px;
-	margin-top: 25px;
+	margin-top: 105px;
 	padding-top: 20px;
 }
 .pic-sale3 {
@@ -516,6 +521,17 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizi
 	padding-left: 120px;
 	line-height: 20px;
 	margin-top: 20px;
+}
+#mspan1, #mspan2, #mspan3{
+	position: absolute;
+	display: none;
+	color: red;
+	font-size: 15px;
+	width: 80px;
+	margin-left: 5px;
+}
+#mspan2{
+	margin-left: 180px;
 }
 /*-------- end content1---------*/
 /*-------- start content2---------*/

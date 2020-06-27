@@ -423,3 +423,32 @@ $('.btn-top').hover(function  () {
     })
 })
 /*返回顶部1end--------------------*/
+/*图片翻转特效-----------------*/
+$(function(){
+    $('.child').hover(function () {
+        var $img = $(this).find('img');
+        $img.stop().animate({
+            height : 0,
+            top : '35px',
+        },500,function(){
+            $img.hide();
+            $img.next('span').show().animate({
+                height : '100px',
+                top : 0
+            },1500)
+        })
+    }, function () {
+        var $span = $(this).find('span');
+        $span.stop().animate({
+            height : 0,
+            top : '35px'
+        },1500,function(){
+            $span.hide();
+            $('.child div img').show().animate({
+                height : '100px',
+                top : 0
+            },500)
+        })
+    })
+})
+/*翻转特效end------------------*/
