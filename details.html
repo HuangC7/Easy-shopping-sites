@@ -7,6 +7,7 @@
 <link href="css/shopping.css" rel='stylesheet' type='text/css' />
     <link href="css/thickbox.css" rel='stylesheet' type='text/css' />
         <link href="css/reset.css" rel='stylesheet' type='text/css' />
+	<link href="css/details-cart.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -158,13 +159,37 @@
 					</ul>
 				</div>
 				<div id="cart">
-					<a href="cart.html"><img src="images/btn_cart.png" alt="放入购物车" /></a>
+					<a href="#0" class="cd-add-to-cart" data-price="200.00"><img src="images/btn_cart.png" alt="放入购物车" /></a>
 				</div>
 			</div>
 		</div>
 </div>
 </div>
 </div>
+	<!----------------购物车图标------------------------>
+	<div class="cd-cart-container empty">
+		<a href="#0" class="cd-cart-trigger">
+			Cart
+			<ul class="count ul">
+				<li>0</li>
+				<li>0</li>
+			</ul>
+		</a>
+		<div class="cd-cart">
+			<div class="wrapper">
+				<header>
+					<h2>Cart</h2>
+					<span class="undo">Item removed.<a href="#0">Undo</a></span>
+				</header>
+				<div class="body">
+					<ul class="ul"></ul>
+				</div>
+				<footer><a href="cart.html" class="checkout btn"><em>进入购物车页面 - $<span>0</span></em></a></footer>
+			</div>
+		</div>
+	</div>
+
+	<!----------------------------------------->
 <!--------start footer-------->
 <div class="footer2" style="margin-top: 55%;">
   <p>Copyright &copy; 2020 HuangC7 hyx.</p>
