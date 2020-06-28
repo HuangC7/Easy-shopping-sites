@@ -978,3 +978,46 @@ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizi
 }
 
 /*右侧工具栏end--------------*/
+/*顶部倒计时-----------------*/
+.secondkill .top {
+	height: 80px;
+	position: absolute;
+	margin-top: -110px;
+	margin-left: 250px;
+	z-index: 44;
+	background-color: red;
+}
+.secondkill .red {
+	color: white;
+	margin-top: 30px;
+	margin-left: 5px;
+	font-size: 18px;
+}
+
+.secondkill .num {
+	background-color: #000;
+	margin: 30px 3px;
+	padding: 3px;
+	color: white;
+	font-size: 18px;
+}
+
+
+/*顶部倒计时end-------------*/
+/*首页返回顶部2-------------------------*/
+.btn_2{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	display: none;
+	margin-left: 650px;
+	background: url(../images/btn.png) no-repeat left top;
+	left: -42%;
+	bottom: 20px;
+	z-index:9999999;
+}
+.btn_2:hover{
+	background: url(../images/btn.png) no-repeat left -40px;
+}
+
+/*end---------------------------*/

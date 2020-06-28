@@ -452,3 +452,65 @@ $(function(){
     })
 })
 /*翻转特效end------------------*/
+/*顶部倒计时----------------*/
+var date= new Date();
+//2. 获取当前分钟
+var min=date.getMinutes();
+//3. 设置当前时间+5分钟：把当前分钟数+5后的值重新设置为date对象的分钟数
+var to = date.setMinutes(min+5);//结束时间
+function antitime() {
+    var now = new Date();
+    var deltaTime = to - now;
+    if (deltaTime <= 0) {
+        window.clearInterval(timer);
+        return;
+    }
+    var m = Math.floor(deltaTime / (60*1000));
+    var s = Math.floor(deltaTime / 1000 % 60);
+    var ms = Math.floor(deltaTime % 1000 / 10);
+    var timeStr = "" + (m<10?"0"+m:m) + (s<10?"0"+s:s) + (ms<10?"0"+ms:ms);
+    console.log(timeStr);
+    $(".secondkill .num").each(function(index, span) {
+        $(span).html(timeStr.substring(index, index+1));
+    });
+}
+//每十毫秒执行一次
+antitime();
+var timer;
+timer = setInterval(antitime, 10);
+
+
+/*顶部倒计时end--------------*/
+/*返回顶部js实现----------------*/
+$(function (){
+    var btn = document.getElementById("btn_2");
+    var timer = null;
+    var isTop = true;
+    var clientHeight = document.documentElement.clientHeight;
+    window.onscroll = function(){
+        var topValue = document.documentElement.scrollTop ||document.body.scrollTop;
+        if(topValue >= (clientHeight / 5)){
+            btn.style.display = "block";
+        }else{
+            btn.style.display = "none";
+        }
+        if(!isTop){
+            clearInterval(timer);
+        }
+        isTop = false;
+    };
+    btn.onclick = function(){
+        timer = setInterval(function(){
+            var topValue = document.documentElement.scrollTop ||document.body.scrollTop;
+            var speed = Math.floor(-topValue/6);
+            document.documentElement.scrollTop = document.body.scrollTop = topValue + speed;
+            isTop = true;
+            console.log(topValue - speed);
+            if(topValue == 0){
+                clearInterval(timer);
+            }
+        },30);
+    }
+})
+
+/*返回顶部js实现end-------------*/
