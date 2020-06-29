@@ -213,28 +213,6 @@ btn.addEventListener("click", function () {
 ast.addEventListener("click",function () {
     layer.style.display = "none";
 })
-
-/*
-//遮罩层
-$(document).ready(function () {
-    $(".mini_login").hide();
-    $("#cover").hide();
-    $("#cover").click(function () {
-        $(".mini_login").hide();
-        $(this).hide();
-    })
-})
-function showMinLogin() {
-    $("#mini_login").show();
-    $("#cover").show();
-}
-function closeLogin() {
-    var min_login = document.getElementsByClassName("mini_login")[0];
-    var cover = document.getElementsByClassName("cover");
-    min_login.style.display = "none";
-    cover.style.display = "none";
-}*/
-
 /*登录功能end----------------------------------------------*/
 /*轮播图---------------------*/
 var innerItems = document.getElementsByClassName("carousel-item");
@@ -514,3 +492,70 @@ $(function (){
 })
 
 /*返回顶部js实现end-------------*/
+/*logo渐显特效----------------*/
+function fadeOutFade(id){
+    this.oMenu=document.getElementById(id);
+    this.i=0;
+}
+fadeOutFade.prototype={
+    init:function() {
+        var _this=this;
+        _this.reset();
+        var oMenu = _this.oMenu;
+        if(oMenu.style.opacity ==0){
+            _this.fnShow();
+        }else{
+            _this.fnHide();
+            setTimeout(function(){_this.fnShow()}, 2000);
+        }
+        setTimeout(function(){_this.init()}, 10000);
+    },
+    reset:function(){
+        var _this=this;
+        var oMenu =_this.oMenu;
+        var i=_this.i;
+        if(i>1){
+            oMenu.style.opacity = 1;
+            _this.i = 1;
+        }else{
+            oMenu.style.opacity = 0;
+            _this.i = 0;
+        }
+    },
+    //渐现
+    fnShow:function() {
+        var _this=this;
+        var oMenu =_this.oMenu;
+        var i=_this.i;
+        if(i < 1){
+            _this.i += 0.1;
+            oMenu.style.opacity = i;
+            setTimeout(function(){_this.fnShow()}, 100);
+        }
+    },
+    //渐隐
+    fnHide:function() {
+        var _this=this;
+        var oMenu =_this.oMenu;
+        var i=_this.i;
+        if (i > 0.1) {
+            _this.i -= 0.1;
+            oMenu.style.opacity = i;
+            setTimeout(function(){_this.fnHide()}, 100);
+        } else {
+            oMenu.style.opacity=0;
+        }
+    }
+}
+$(function () {
+    var logo = document.getElementById("logo_img");
+    logo.onmouseover = function () {
+        var fadeOutFadeObj = new fadeOutFade("logo_img");
+        fadeOutFadeObj.init();
+        $(this).unbind();
+    }
+});
+/*bug----------------*/
+//多次鼠标经过后，图片就会不停的闪烁，停不下来。。
+/*end----------------*/
+/*特效end--------------------*/
